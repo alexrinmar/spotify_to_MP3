@@ -6,9 +6,6 @@ from pytubefix import YouTube
 from pytube.innertube import _default_clients
 import os
 
-hello = 'yes'
-
-
 def download_spotify_music(playlist_url): # function to download  music from spotify playlist
     print('Processing Spotify Songs...')
     songs = sp.playlist_items(playlist_url,offset=0, # get list of songs
