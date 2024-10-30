@@ -28,7 +28,8 @@ def download_spotify_music(playlist_url): # function to download  music from spo
         if os.path.isfile(path+info_fmt+".mp3"): # if the file already exists
             print("FILE ALREADY DOWNLOADED - SKIPPING") # skip
         else:
-            s = Search(info) # search youtube for the song title and artist
+            s = Search(info + ' lyrics') # search youtube for the song title and artist
+            # 'lyrics' means you don't get weird 2000s music videos that are 2000 hours long
             yt = YouTube(str(s.videos[0].watch_url),# find the exact video
                      use_oauth=True,
                      allow_oauth_cache=True)
