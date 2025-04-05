@@ -25,6 +25,7 @@ def download_spotify_music(spotify_playlist_url): # function to download  music 
         info_fmt = info_fmt.replace(' ','_')
         info_fmt = info_fmt.replace("'",'_')
         info_fmt = info_fmt.replace("/",'_')
+        info_fmt = info_fmt.replace('"','_')
         songs_in_playlist.append(info_fmt+'.mp3') # append .mp3 to the formatted title
         print('Downloading {}...'.format(info))
         if os.path.isfile(sp_path+info_fmt+".mp3"): # if the file already exists
